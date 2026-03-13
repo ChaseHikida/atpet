@@ -59,7 +59,6 @@ class FanController:
                 self.temp = self._read_temp()
                 self.duty = self._temp_to_duty(self.temp)
                 self._pwm.ChangeDutyCycle(self.duty)
-                print(f"[fan]  {self.temp:.1f}°C  →  {self.duty}%")
             except Exception as exc:
                 print(f"[fan] error: {exc}")
             self._stop.wait(POLL_FAN)
