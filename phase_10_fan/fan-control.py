@@ -20,7 +20,7 @@ def get_temp():
 
 def temp_to_duty(temp):
     if temp <= TEMP_LOW:
-        return 30   # Minimum speed (not 0 — keeps fan alive)
+        return 100   # Minimum speed (not 0 — keeps fan alive)
     elif temp >= TEMP_HIGH:
         return 100  # Full speed
     else:
